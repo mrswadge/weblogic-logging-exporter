@@ -29,7 +29,7 @@ import weblogic.logging.exporter.config.FilterConfig;
 @SuppressWarnings("UnnecessaryContinue")
 class LogExportHandler extends Handler {
 
-  private static final String DOC_TYPE = "doc";
+  private static final String DOC_TYPE = "_doc";
   private static final String INDEX = " { \"index\" : { }} ";
   private static final int offValue = Level.OFF.intValue();
 
@@ -249,9 +249,6 @@ class LogExportHandler extends Handler {
     final String mappings =
         "{"
             + "  \"mappings\": {"
-            + "    \""
-            + DOC_TYPE
-            + "\": {"
             + "      \"properties\": {"
             + "        \"timestamp\": {"
             + "\"type\": \"date\" "
@@ -293,7 +290,6 @@ class LogExportHandler extends Handler {
             + "\"type\": \"keyword\" "
             + "}"
             + "      }"
-            + "    }"
             + "  }"
             + "}";
 

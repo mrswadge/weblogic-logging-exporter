@@ -7,7 +7,7 @@
     <groupId>oracle.kubernetes</groupId>
     <artifactId>weblogic-logging-exporter</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
 
     <name>WebLogic Logging Exporter</name>
     <description>An exporter that integrates WebLogic Server logs into ElasticSearch and Kibana</description>
@@ -46,6 +46,10 @@
     </pluginRepositories>
 
     -->
+    
+    <properties>
+    	<weblogic-version>12.2.1-4-0</weblogic-version>
+    </properties>
 
     <build>
         <plugins>
@@ -132,49 +136,49 @@
         <dependency>
             <groupId>com.oracle.weblogic</groupId>
             <artifactId>com.oracle.weblogic.logging</artifactId>
-            <version>12.2.1-3-0</version>
+            <version>${weblogic-version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.oracle.weblogic</groupId>
             <artifactId>com.bea.core.logging</artifactId>
-            <version>12.2.1-3-0</version>
+            <version>${weblogic-version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.oracle.weblogic</groupId>
             <artifactId>com.bea.core.logging.debug</artifactId>
-            <version>12.2.1-3-0</version>
+            <version>${weblogic-version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.oracle.weblogic</groupId>
             <artifactId>com.bea.core.diagnostics.core</artifactId>
-            <version>12.2.1-3-0</version>
+            <version>${weblogic-version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.oracle.weblogic</groupId>
             <artifactId>com.bea.core.diagnostics.logging</artifactId>
-            <version>12.2.1-3-0</version>
+            <version>${weblogic-version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.oracle.weblogic</groupId>
             <artifactId>com.bea.core.i18n</artifactId>
-            <version>12.2.1-3-0</version>
+            <version>${weblogic-version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.oracle.weblogic</groupId>
             <artifactId>com.bea.core.repackaged.asm</artifactId>
-            <version>12.2.1-3-0</version>
+            <version>${weblogic-version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>com.oracle.weblogic</groupId>
             <artifactId>com.bea.core.diagnostics.query</artifactId>
-            <version>12.2.1-3-0</version>
+            <version>${weblogic-version}</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
